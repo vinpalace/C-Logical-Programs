@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<string.h>
-#include<malloc.h>
 #include<stdlib.h>
 
 
@@ -28,8 +27,7 @@ int main()
 {
 
     int choice = 1;
-    char state;
-    int period;
+
     bill1 = (BILL*)malloc(sizeof(BILL));
 
     bill1->travelTime = 0;
@@ -37,10 +35,12 @@ int main()
 
     while(choice)
     {
+        char state = ' ';
+        int period = 0;
         printf("Enter  state\n");
         //scanf("%c %d",&state,&period);
-        scanf("%c",&state);
-        scanf("%d",&period);
+        scanf(" %c %d",&state, &period);
+
 
 
         if(state == 's')
